@@ -29,6 +29,9 @@ class User(Model):
     def videos(self, **kwargs) -> 'helix.Videos':
         return helix.Videos(api=self._api, user_id=int(self.id), **kwargs)
 
+    def clips(self, **kwargs) -> 'helix.Clips':
+        return helix.Clips(api=self._api, broadcaster_id=int(self.id), **kwargs)
+
     @property
     def stream(self) -> 'helix.Stream':
         return helix.Streams(api=self._api, user_id=int(self.id))[0]
