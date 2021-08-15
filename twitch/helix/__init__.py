@@ -11,4 +11,5 @@ __all__: List[Callable] = [
     User, Users,
     Follow, Follows,
     Game, Games,
+    Clip, Clips
 ]
